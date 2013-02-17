@@ -3,10 +3,10 @@ from settings_default import *
 UNIQUE_PREFIX = 'biblio_production'
 
 DEPLOYMENT = {
-    'git_repository': 'git@github.com:allink/biblio.git',
+    'git_repository': 'git@github.com:sspross/biblio.git',
     'git_branch': 'master',
     'git_remote': 'origin',
-    'hosts': ['.nine.ch'],
+    'hosts': ['nexa.nine.ch'],
     'user': 'www-data',
     'project': 'biblio',
     'root': '/home/www-data/projects',
