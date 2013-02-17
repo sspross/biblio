@@ -2,11 +2,6 @@
 from settings_default import *
 UNIQUE_PREFIX = 'biblio_production'
 
-# ##############################################################################
-# remove before flight
-# ##############################################################################
-raise Exception('Production not yet configured.')
-
 DEPLOYMENT = {
     'git_repository': 'git@github.com:allink/biblio.git',
     'git_branch': 'master',
@@ -73,5 +68,5 @@ CELERY_ENABLE_UTC = True
 
 # sentry
 RAVEN_CONFIG = {
-    'dsn': '',
+    'dsn': 'https://508d92f5d1e242b39e8c04b9f80425e2:00508fa123d64e46b23adccc0a6dc190@sentry.allink.ch/29',
 }
