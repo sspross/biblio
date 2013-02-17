@@ -1,0 +1,14 @@
+Django
+django-mptt
+FeinCMS
+South
+PIL
+django-robots
+django-compressor
+cssmin
+BeautifulSoup
+django-debug-toolbar
+pytz
+raven
+django-admin-sso
+https://github.com/allink/allink-essentials/zipball/master
