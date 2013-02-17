@@ -1,26 +1,13 @@
-from feincms.module.page.models import Page
-from feincms.content.richtext.models import RichTextContent
+from django.db import models
 
 
-Page.register_extensions(
-    # 'feincms.module.extensions.datepublisher',
-    # 'feincms.module.extensions.translations',
-    'feincms.module.extensions.changedate',
-    'feincms.module.extensions.seo',
-    'feincms.module.page.extensions.titles',
-    'feincms.module.page.extensions.navigation',
-    'feincms.module.page.extensions.symlinks',
-)
+class Book(models.Model):
+    num = models.IntegerField('Nr.')
+    opan = models.CharField('Opa Nr.', max_length=14, blank=True)
+    isbn = models.CharField('ISBN', max_length=14, blank=True)
+    title = models.CharField(max_length=255, blank=True)
 
-
-Page.register_templates({
-    'key': 'base',
-    'title': 'Base',
-    'path': 'base.html',
-    'regions': (
-        ('main', 'Main Region'),
-    ),
-})
-
-
-Page.create_content_type(RichTextContent, regions=('main',))
+    def __unicode__(self):
+        if self.title:
+            return self.title
+        return self.isbn
