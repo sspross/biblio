@@ -31,7 +31,7 @@ DATABASES = {
     }
 }
 
-MIDDLEWARE_CLASSES += ('allink_essentials.middleware.ValidateHostMiddleware',)
+MIDDLEWARE_CLASSES += ('allink_essentials.middleware.validate_host_middleware.ValidateHostMiddleware',)
 
 ADMINS = (
     ('itcrowd', 'itcrowd@allink.ch'),
