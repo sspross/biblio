@@ -3,7 +3,7 @@ from feincms.content.richtext.models import RichTextContent
 
 
 Page.register_extensions(
-   # 'feincms.module.extensions.datepublisher',
+    # 'feincms.module.extensions.datepublisher',
     # 'feincms.module.extensions.translations',
     'feincms.module.extensions.changedate',
     'feincms.module.extensions.seo',
