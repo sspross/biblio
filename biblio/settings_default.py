@@ -1,3 +1,4 @@
+# coding=utf-8
 # Django settings for biblio project.
 import os
 PROJECT_DIR = os.path.dirname(__file__)
@@ -125,9 +126,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.sitemaps',
-    'feincms',
-    'feincms.module.page',
-    'feincms.module.medialibrary',
+    # 'feincms',
+    # 'feincms.module.page',
+    # 'feincms.module.medialibrary',
     'biblio',
     'mptt',
     'south',
@@ -190,24 +191,8 @@ LOGGING = {
     }
 }
 
-# FEINcms settings
-FEINCMS_ADMIN_MEDIA = '/static/feincms/'
-FEINCMS_TINYMCE_INIT_CONTEXT = {
-    'TINYMCE_JS_URL': os.path.join(STATIC_URL, 'javascript/tiny_mce/tiny_mce.js'),
-    'TINYMCE_CONTENT_CSS_URL': None,
-    'TINYMCE_LINK_LIST_URL': None
-}
-FEINCMS_RICHTEXT_INIT_CONTEXT = FEINCMS_TINYMCE_INIT_CONTEXT
-
-SOUTH_MIGRATION_MODULES = {
-    'page': 'biblio.migrations_page',
-    'medialibrary': 'biblio.migrations_medialibrary',
-}
-
 LANGUAGES = (
     ('en', 'English'),
-    ('de', 'German'),
-    ('fr', 'French'),
 )
 
 # Compressor settings
