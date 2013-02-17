@@ -24,8 +24,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_%s' % UNIQUE_PREFIX,
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'db',
+        'PASSWORD': 'gevvemav',
         'HOST': '',
         'PORT': '',
     }
