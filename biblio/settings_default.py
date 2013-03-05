@@ -207,3 +207,8 @@ IGNORABLE_404_URLS = (
 )
 
 DEFAULT_FILE_STORAGE = 'allink_essentials.storage.ascii_file_system_storage.ASCIIFileSystemStorage'
+
+OBJECT_KINDS = (
+    (0, 'Book'),
+    (1, 'Video'),
+)
