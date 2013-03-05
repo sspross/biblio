@@ -4,7 +4,8 @@ from biblio.models import Book, Author, Publisher
 
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('num', 'opan', 'isbn', 'title', 'author', 'publisher', 'year',)
+    list_display = ('num', 'kind', 'opan', 'isbn', 'title', 'author', 'publisher', 'year',)
+    list_filter = ('kind',)
     search_fields = ('num', 'opan', 'isbn', 'title', 'author', 'publisher', 'year',)
     readonly_fields = tuple()
     raw_id_fields = ('author', 'publisher',)
